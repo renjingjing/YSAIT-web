@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSAIT | Youth Sciences Association of Innovation and Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Noto+Sans+SC:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #f8fafc; 
+            color: #1e293b; 
+            font-family: 'Noto Sans SC', 'Montserrat', sans-serif;
+            margin: 0;
+        }
+        /* 浅色科技感背景图 */
+        .hero-light {
+            background: linear-gradient(rgba(248, 250, 252, 0.85), rgba(248, 250, 252, 0.95)), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .white-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s ease;
+        }
+        .white-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+            border-color: #0ea5e9;
+        }
+        .accent-text { color: #0ea5e9; }
+        [lang="en"] .lang-zh { display: none; }
+        [lang="zh"] .lang-en { display: none; }
+    </style>
+</head>
+<body lang="zh">
+
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter accent-text">YSAIT</div>
+            <button onclick="document.body.setAttribute('lang', document.body.getAttribute('lang') === 'zh' ? 'en' : 'zh')" 
+                    class="text-xs font-bold border-2 border-sky-500 text-sky-500 px-4 py-1.5 rounded-full hover:bg-sky-500 hover:text-white transition">
+                <span class="lang-zh">ENGLISH</span><span class="lang-en">中文模式</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero-light min-h-screen flex items-center justify-center pt-20 px-8 text-center">
+        <div class="max-w-4xl">
+            <div class="inline-block px-3 py-1 mb-6 bg-sky-100 text-sky-600 text-[10px] font-bold tracking-widest rounded-md uppercase">
+                <span class="lang-zh">全球青少年科创协会</span><span class="lang-en">Global Youth Innovation</span>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-8 text-slate-900 leading-[1.1]">
+                <span class="lang-zh">用创新<br><span class="accent-text">定义未来</span></span>
+                <span class="lang-en">Defining Future <br><span class="accent-text">through Innovation</span></span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                <span class="lang-zh">超越计算机编程。我们在加拿大及全球范围内，通过负责任的科学实践促进 STEM 发展。</span>
+                <span class="lang-en">Beyond computer science coding. Promoting STEM and innovation worldwide through accountable practice.</span>
+            </p>
+            <a href="#purposes" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-sky-600 transition-all shadow-lg shadow-slate-200">
+                <span class="lang-zh">查看官方宗旨</span><span class="lang-en">Official Purposes</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="purposes" class="max-w-7xl mx-auto px-8 py-32 grid md:grid-cols-2 gap-12">
+        <div class="white-card p-12 rounded-[2.5rem]">
+            <div class="w-12 h-12 bg-sky-50 rounded-2xl flex items-center justify-center mb-6">🚀</div>
+            <h3 class="text-2xl font-bold mb-4 text-slate-800">
+                <span class="lang-zh">超越编程</span><span class="lang-en">Beyond Coding</span>
+            </h3>
+            <p class="text-slate-500 leading-relaxed font-light">
+                <span class="lang-zh">不仅限于代码编写。我们扩展到更广阔的科学技术概念，重点在于信息共享、讨论和全球社交网络。</span>
+                <span class="lang-en">Expanding concepts beyond computer science coding, focusing on information sharing, discussion, and networking.</span>
+            </p>
+        </div>
+        <div class="white-card p-12 rounded-[2.5rem]">
+            <div class="w-12 h-12 bg-sky-50 rounded-2xl flex items-center justify-center mb-6">🌍</div>
+            <h3 class="text-2xl font-bold mb-4 text-slate-800">
+                <span class="lang-zh">负责任的实践</span><span class="lang-en">Accountability</span>
+            </h3>
+            <p class="text-slate-500 leading-relaxed font-light">
+                <span class="lang-zh">为全球青少年提供科学、技术及创新方面的支持，通过负责任的实践助力未来领袖。</span>
+                <span class="lang-en">Supporting children and youth worldwide in science, technology, and innovation through accountable practice.</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-100 py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="max-w-md text-left">
+                <h4 class="text-xl font-bold text-slate-900 mb-4 tracking-tighter">YSAIT</h4>
+                <p class="text-sm text-slate-400 font-light leading-relaxed">
+                    Youth Sciences Association of Innovation and Technology. Registered and incorporated in British Columbia, Canada.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-4">
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold tracking-widest">Inc Number</span>
+                    <span class="text-sm font-semibold text-slate-700">S0066930</span>
+                </div>
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold tracking-widest">Business Number</span>
+                    <span class="text-sm font-semibold text-slate-700">72865 3098 BC0001</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-gray-50 text-center">
+            <p class="text-[10px] text-slate-300 tracking-[0.2em]">© 2025 YSAIT OFFICIAL PORTAL. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
