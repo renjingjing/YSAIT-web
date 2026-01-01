@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSAIT | Youth Sciences Association of Innovation and Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; scroll-behavior: smooth; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%); }
+        [lang="en"] .lang-zh { display: none; }
+        [lang="zh"] .lang-en { display: none; }
+    </style>
+</head>
+<body class="hero-gradient" lang="zh">
+
+    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-sky-400">YSAIT</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+            <a href="#" class="hover:text-white"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a>
+            <a href="#about" class="hover:text-white"><span class="lang-zh">关于我们</span><span class="lang-en">About</span></a>
+            <a href="#vision" class="hover:text-white"><span class="lang-zh">使命愿景</span><span class="lang-en">Vision</span></a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleLang()" class="border border-sky-500/50 text-sky-400 px-3 py-1 rounded text-xs hover:bg-sky-500/10 transition">
+                <span class="lang-zh">English Version</span><span class="lang-en">中文版</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-8 py-20 text-center">
+        <h2 class="text-sky-400 font-bold tracking-widest mb-4">YSAIT</h2>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            <span class="lang-zh">青少年创新与科学技术协会</span>
+            <span class="lang-en">Youth Sciences Association of <br>Innovation and Technology</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <span class="lang-zh">超越编程，探索 STEM。我们致力于在全球范围内促进青少年的科学、技术与创新实践。</span>
+            <span class="lang-en">Beyond computer science coding. We promote and facilitate STEM and innovation for youth in Canada and worldwide.</span>
+        </p>
+    </section>
+
+    <section id="vision" class="max-w-7xl mx-auto px-8 py-10">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-2xl">
+                <h3 class="text-xl font-bold mb-4 text-sky-400">
+                    <span class="lang-zh">我们的使命</span><span class="lang-en">Our Objectives</span>
+                </h3>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    <span class="lang-zh">通过互联网、媒体和各类活动，在加拿大及全球范围内推广 STEM 教育，鼓励青少年参与科学技术讨论与社交。</span>
+                    <span class="lang-en">To promote STEM beyond computer coding through internet, media, and activities, supporting youth in Canada and worldwide.</span>
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <h3 class="text-xl font-bold mb-4 text-sky-400">
+                    <span class="lang-zh">创新实践</span><span class="lang-en">Innovative Practice</span>
+                </h3>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    <span class="lang-zh">我们强调负责任的实践，关注信息共享与讨论，帮助孩子在创新的道路上走得更远。</span>
+                    <span class="lang-en">We focus on information sharing, networking, and accountable practice for youth in science and technology innovation.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-20 border-t border-white/10 text-gray-500 text-xs">
+        <p class="mb-2">Youth Sciences Association of Innovation and Technology</p>
+        <p>© 2025 YSAIT. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            body.setAttribute('lang', body.getAttribute('lang') === 'zh' ? 'en' : 'zh');
+        }
+    </script>
+</body>
+</html>
