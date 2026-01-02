@@ -3,96 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YSAIT | Beyond Coding</title>
+    <title>YSAIT | 创新教育探索</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: #ffffff; color: #1d1d1f; }
         .glass-nav { backdrop-filter: saturate(180%) blur(20px); background: rgba(255, 255, 255, 0.7); }
-        .img-card { border-radius: 24px; overflow: hidden; background: #f5f5f7; transition: transform 0.4s ease; height: 100%; }
-        .img-card img { width: 100%; height: 100%; object-fit: cover; }
-        [lang="en"] .lang-zh { display: none; }
-        [lang="zh"] .lang-en { display: none; }
+        .img-card { border-radius: 24px; overflow: hidden; background: #f5f5f7; border: 1px solid rgba(0,0,0,0.05); }
+        .img-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     </style>
 </head>
 <body>
     <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100/50 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-blue-600 italic">YSAIT</div>
-            <button onclick="document.body.setAttribute('lang', document.body.getAttribute('lang') === 'zh' ? 'en' : 'zh')" 
-                    class="text-[11px] font-bold border border-gray-200 px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all">
-                <span class="lang-zh">ENGLISH</span><span class="lang-en">中文</span>
-            </button>
+            <div class="text-2xl font-black tracking-tighter text-blue-600">YSAIT</div>
+            <div class="text-[10px] font-bold border border-gray-200 px-4 py-2 rounded-full">SURREY, BC</div>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-7xl font-extrabold mb-8 tracking-tighter">Beyond<br><span class="text-blue-600">Coding.</span></h1>
-                <p class="text-2xl text-gray-400 font-light leading-relaxed mb-8">
-                    <span class="lang-zh">未来科技与创新教育：全方位探索。将抽象理论转化为触手可及的现实。</span>
-                    <span class="lang-en">Turning abstract theory into tangible reality. Beyond computer science coding.</span>
-                </p>
-            </div>
-            <div class="img-card shadow-2xl aspect-video">
-                <img src="class.jpg">
-            </div>
+    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Beyond <span class="text-blue-600">Coding.</span></h1>
+        <p class="text-xl text-gray-400 mb-12">未来科技与创新教育：全方位探索</p>
+        <div class="img-card shadow-2xl aspect-video max-w-4xl mx-auto mb-20">
+            <img src="https://renjingjing.github.io/YSAIT-web/class.jpg">
         </div>
     </header>
 
     <section class="py-24 bg-[#f5f5f7] px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 tracking-tight">从逻辑到现实的跨越</h2>
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16 italic">从逻辑到现实的跨越</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="space-y-4">
-                    <div class="img-card h-64"><img src="logic.jpg"></div>
-                    <h3 class="text-xl font-bold">算法逻辑</h3>
+                    <div class="img-card h-64 shadow-md"><img src="https://renjingjing.github.io/YSAIT-web/logic.jpg"></div>
+                    <p class="font-bold">绘制 AI 决策逻辑图</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="img-card h-64"><img src="motion3.jpg"></div>
-                    <h3 class="text-xl font-bold">工程实践</h3>
+                    <div class="img-card h-64 shadow-md"><img src="https://renjingjing.github.io/YSAIT-web/motion3.jpg"></div>
+                    <p class="font-bold">Motion³ 工程实践</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="img-card h-64"><img src="study.jpg"></div>
-                    <h3 class="text-xl font-bold">硬件开发</h3>
+                    <div class="img-card h-64 shadow-md"><img src="https://renjingjing.github.io/YSAIT-web/study.jpg"></div>
+                    <p class="font-bold">STEAM 硬件开发</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="img-card aspect-square shadow-xl"><img src="dog.jpg"></div>
-            <div class="img-card aspect-square shadow-xl"><img src="family.jpg"></div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="img-card aspect-square shadow-xl">
+                <img src="https://renjingjing.github.io/YSAIT-web/dog.jpg">
+            </div>
+            <div class="img-card aspect-square shadow-xl">
+                <img src="https://renjingjing.github.io/YSAIT-web/family.jpg">
+            </div>
         </div>
+        <p class="text-center mt-8 text-gray-500">AI 创意生成：技术与艺术的融合</p>
     </section>
 
-    <section class="py-24 bg-black text-white px-6 rounded-[50px] mx-4 mb-10">
+    <section class="py-24 bg-black text-white px-6 rounded-[50px] mx-4 mb-10 overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="flex-1">
-                <h2 class="text-5xl font-bold mb-6 italic">创意无边界</h2>
-                <p class="text-gray-400 text-xl">从机械结构到编程控制，每一个项目都是成长的见证。</p>
+                <h2 class="text-4xl font-bold mb-6 italic text-blue-400">创意无边界</h2>
+                <p class="text-gray-400 text-lg">孩子们合作完成的“抓娃娃机”项目</p>
             </div>
-            <div class="flex-1 img-card h-80 shadow-2xl"><img src="claw.jpg"></div>
+            <div class="flex-1 img-card h-80 shadow-2xl border-4 border-gray-800">
+                <img src="https://renjingjing.github.io/YSAIT-web/claw.jpg">
+            </div>
         </div>
     </section>
 
     <section class="py-24 px-6 max-w-7xl mx-auto text-center">
-        <div class="img-card max-w-4xl mx-auto shadow-2xl mb-10"><img src="award.jpg"></div>
-        <p class="text-gray-400 italic font-light">STEM Academy 结业证书：记录每一个科创里程碑</p>
+        <div class="img-card max-w-4xl mx-auto shadow-2xl mb-10">
+            <img src="https://renjingjing.github.io/YSAIT-web/award.jpg">
+        </div>
+        <h3 class="text-2xl font-bold">成长与成就</h3>
+        <p class="text-gray-400 mt-4 italic">青少年 STEM 学院结业证书</p>
     </section>
 
-    <footer class="bg-gray-50 py-24 px-8 border-t border-gray-100">
+    <footer class="bg-gray-50 py-24 px-8 border-t border-gray-200">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
                 <h3 class="text-3xl font-black mb-6">YSAIT</h3>
-                <p class="text-gray-500 font-medium">📍 #302-1959 152 St, Surrey, BC, Canada</p>
-                <p class="text-gray-500 font-medium">📞 +1 (778) 858-3672</p>
+                <p class="text-gray-600 font-bold mb-2">📍 地址：#302-1959 152 St, Surrey, BC, Canada</p>
+                <p class="text-gray-600 font-bold">📞 电话：7788583672</p>
             </div>
             <div class="md:text-right">
-                <p class="text-xs font-mono text-gray-300">INC NO: S0066930 | BN: 72865 3098 BC0001</p>
-                <p class="text-[10px] text-gray-400 mt-10 uppercase tracking-widest">© 2025 YSAIT PORTAL. ALL RIGHTS RESERVED.</p>
+                <p class="text-xs font-mono text-gray-300">INC: S0066930 | BN: 72865 3098 BC0001</p>
+                <p class="text-[10px] text-gray-400 mt-10 uppercase tracking-widest">© 2026 YSAIT OFFICIAL PORTAL</p>
             </div>
         </div>
     </footer>
