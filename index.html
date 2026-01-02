@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
+<html lang="en"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YSAIT | Beyond Coding</title>
@@ -9,38 +8,59 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: #ffffff; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
         .img-card { border-radius: 24px; overflow: hidden; background: #f5f5f7; border: 1px solid rgba(0,0,0,0.05); aspect-ratio: 16/10; }
-        .img-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .img-card:hover img { transform: scale(1.05); }
+        .img-card img { width: 100%; height: 100%; object-fit: cover; }
+        /* 语言显示控制逻辑 */
+        [lang="en"] .lang-zh { display: none; }
+        [lang="zh"] .lang-en { display: none; }
+        .glass-nav { backdrop-filter: saturate(180%) blur(20px); background: rgba(255, 255, 255, 0.7); }
     </style>
 </head>
 <body class="pt-20">
-    <nav class="fixed w-full z-50 top-0 bg-white/70 backdrop-blur-lg border-b border-gray-100 px-6 py-4">
+    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-blue-600">YSAIT</div>
-            <div class="hidden md:block text-[10px] font-bold tracking-widest text-gray-400">SURREY, BC · CANADA</div>
+            <div class="text-2xl font-black tracking-tighter text-blue-600 italic">YSAIT.ORG</div>
+            <button onclick="document.documentElement.setAttribute('lang', document.documentElement.getAttribute('lang') === 'zh' ? 'en' : 'zh')" 
+                    class="text-[11px] font-bold border border-gray-200 px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all tracking-widest">
+                <span class="lang-en">CHINESE</span><span class="lang-zh">ENGLISH</span>
+            </button>
         </div>
     </nav>
 
     <header class="py-24 px-6 max-w-7xl mx-auto text-center">
-        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter italic">Beyond <span class="text-blue-600">Coding.</span></h1>
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter">
+            Beyond <span class="text-blue-600 italic">Coding.</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-12 font-light">
+            <span class="lang-en">Future Tech & Innovative Education: A Comprehensive Exploration.</span>
+            <span class="lang-zh">未来科技与创新教育：全方位探索。</span>
+        </p>
         <div class="img-card shadow-2xl max-w-5xl mx-auto"><img src="class.jpg"></div>
     </header>
 
     <section class="py-24 bg-[#f5f5f7] px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 tracking-tight text-center">从逻辑到现实的跨越</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-4xl font-bold mb-16 tracking-tight text-center italic">
+                <span class="lang-en">From Logic to Reality</span>
+                <span class="lang-zh">从逻辑到现实的跨越</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12">
                 <div class="space-y-4 text-center">
                     <div class="img-card shadow-lg"><img src="logic.jpg"></div>
-                    <p class="font-bold text-lg">算法逻辑</p>
+                    <p class="font-bold text-lg uppercase tracking-wider">
+                        <span class="lang-en">Algorithmic Logic</span><span class="lang-zh">算法逻辑</span>
+                    </p>
                 </div>
                 <div class="space-y-4 text-center">
                     <div class="img-card shadow-lg"><img src="motion3.jpg"></div>
-                    <p class="font-bold text-lg">工程实践</p>
+                    <p class="font-bold text-lg uppercase tracking-wider">
+                        <span class="lang-en">Engineering Practice</span><span class="lang-zh">工程实践</span>
+                    </p>
                 </div>
                 <div class="space-y-4 text-center">
                     <div class="img-card shadow-lg"><img src="study.jpg"></div>
-                    <p class="font-bold text-lg">硬件开发</p>
+                    <p class="font-bold text-lg uppercase tracking-wider">
+                        <span class="lang-en">Hardware Development</span><span class="lang-zh">硬件开发</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -51,31 +71,48 @@
             <div class="img-card shadow-xl"><img src="dog.jpg"></div>
             <div class="img-card shadow-xl"><img src="family.jpg"></div>
         </div>
-        <p class="text-xl text-gray-400 font-light italic">AI 创意生成：技术与艺术的完美融合</p>
+        <p class="text-xl text-gray-400 font-light italic">
+            <span class="lang-en">AI Creativity: The Fusion of Technology and Art</span>
+            <span class="lang-zh">AI 创新：技术与艺术的融合</span>
+        </p>
     </section>
 
     <section class="py-24 bg-black text-white px-6 rounded-[60px] mx-4 mb-10 overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="flex-1">
-                <h2 class="text-5xl font-bold mb-6 italic text-blue-400 tracking-tighter">创意无边界</h2>
-                <p class="text-gray-400 text-xl leading-relaxed">从机械结构到编程控制，<br>每一个项目都是成长的见证。</p>
+                <h2 class="text-5xl font-bold mb-6 italic text-blue-400 tracking-tighter">
+                    <span class="lang-en">Boundless Creativity</span>
+                    <span class="lang-zh">创意无边界</span>
+                </h2>
+                <p class="text-gray-400 text-xl leading-relaxed">
+                    <span class="lang-en">From mechanical structures to programming, every project is a witness to growth.</span>
+                    <span class="lang-zh">从机械结构到编程控制，每一个项目都是成长的见证。</span>
+                </p>
             </div>
-            <div class="flex-1 img-card h-96 shadow-2xl"><img src="claw.jpg"></div>
+            <div class="flex-1 img-card h-96 shadow-2xl border-4 border-gray-900"><img src="claw.jpg"></div>
         </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <div class="img-card max-w-4xl mx-auto shadow-2xl mb-10"><img src="award.jpg"></div>
+        <p class="text-gray-400 italic">
+            <span class="lang-en">STEM Academy Certificate: Recording Milestones</span>
+            <span class="lang-zh">STEM 学院结业证书：记录每一个科创里程碑</span>
+        </p>
     </section>
 
     <footer class="bg-gray-50 py-32 px-8 border-t border-gray-200">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div class="space-y-6">
-                <h3 class="text-4xl font-black italic">YSAIT</h3>
+                <h3 class="text-4xl font-black italic text-blue-600">YSAIT</h3>
                 <div class="space-y-2 text-gray-500 font-medium text-lg">
                     <p>📍 #302-1959 152 St, Surrey, BC, Canada</p>
-                    <p>📞 7788583672</p>
+                    <p>📞 +1 (778) 858-3672</p>
                 </div>
             </div>
             <div class="md:text-right flex flex-col justify-end">
                 <p class="text-xs font-mono text-gray-300 mb-2">INC NO: S0066930 | BN: 72865 3098 BC0001</p>
-                <p class="text-[10px] text-gray-400 tracking-[0.4em] uppercase">© 2026 YSAIT OFFICIAL PORTAL</p>
+                <p class="text-[10px] text-gray-400 tracking-[0.4em] uppercase">© 2026 YSAIT.ORG OFFICIAL PORTAL</p>
             </div>
         </div>
     </footer>
