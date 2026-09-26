@@ -122,6 +122,8 @@
           <input type="hidden" name="_subject" value="AMC 报名提交">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://ysait.org/exam/thanks.html">
+          <input type="hidden" name="_autoresponse" value="我们已收到您的 AMC 报名资料。请注意：此邮件表示表单已提交，不代表报名最终确认。Jenny 会核对付款和报名信息，确认后再通过邮件或微信通知。Thank you for submitting the AMC registration form. This email confirms that your form was received, but it is not the final registration confirmation. Jenny will verify the payment and registration details, then confirm by email or WeChat.">
           <input type="hidden" id="registrationId" name="报名编号">
 
           <fieldset>
@@ -180,8 +182,9 @@
               </label>
               <label>付款人姓名<input name="付款人姓名" required></label>
             </div>
+            <p class="small">请先完成付款，再提交表单。e-transfer 请转至 jenny@ysacamp.com；微信付款请先邮件联系，我们会发送付款码。</p>
             <label>e-transfer confirmation number<span class="hint">如有请填写</span><input name="e-transfer confirmation number"></label>
-            <label>上传付款截图<span class="hint">JPG / PNG / PDF，所有附件合计最多 10 MB</span><input type="file" name="attachment" accept="image/*,.pdf" required></label>
+            <label>上传付款截图<span class="hint">必填。JPG / PNG / PDF，所有附件合计最多 10 MB</span><input type="file" name="attachment" accept="image/*,.pdf" required></label>
             <label>备注<span class="hint">可选</span><textarea name="备注" placeholder="例如兄弟姐妹一起报名、特殊说明等"></textarea></label>
           </fieldset>
 
