@@ -216,43 +216,25 @@
     const form = document.getElementById("registrationForm");
     const submitButton = document.getElementById("submitButton");
     const statusBox = document.getElementById("formStatus");
-    const endpoint = "https://formsubmit.co/ajax/941499bc97db786941fd9569e889a764";
 
     function showStatus(type, message) {
       statusBox.className = "form-status show " + type;
       statusBox.textContent = message;
     }
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+    form.addEventListener("submit", (event) => {
       if (!form.reportValidity()) return;
 
       const file = form.querySelector('input[type="file"]').files[0];
       if (file && file.size > 10 * 1024 * 1024) {
+        event.preventDefault();
         showStatus("error", "付款截图超过 10 MB，请压缩图片或换一张截图后再提交。");
         return;
       }
 
       submitButton.disabled = true;
       submitButton.textContent = "正在提交...";
-      showStatus("ok", "正在提交，请不要关闭页面。");
-
-      try {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: new FormData(form)
-        });
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok || result.success !== "true") {
-          throw new Error(result.message || "提交失败");
-        }
-        window.location.href = "https://ysait.org/exam/thanks.html";
-      } catch (error) {
-        showStatus("error", "提交没有成功，请检查网络后再点一次提交。若仍失败，请把报名信息和付款截图邮件发至 jenny@ysacamp.com。");
-        submitButton.disabled = false;
-        submitButton.textContent = "重新提交";
-      }
+      showStatus("ok", "正在提交，请不要关闭页面。成功后会自动显示“报名资料已提交”。");
     });
   </script>
 </body>
